@@ -1,4 +1,6 @@
-first_number = int(input('Введите первое число: '))
-second_number = int(input('Введите первое число: '))
+import random
 
-print(first_number, '+', second_number, '=', first_number+second_number)
+my_list = [x for x in range(1,51)]
+
+
+print(my_list)
