@@ -57,7 +57,7 @@ def return_to_the_menu():
 
     while True:
         temp_val = int(
-            input("Вернуться в меню? \n 1 - да, вернуться \n 2 - нет, выйти из программы: \n"))
+            input("\n Вернуться в меню? \n 1 - да, вернуться \n 2 - нет, выйти из программы: \n"))
         if temp_val == 1:
             menu(filename)
         elif temp_val == 2:
@@ -79,7 +79,7 @@ def search_person(request, filename):
                 flag = False
                 
         if flag:    
-                print("\033[31mЗапись не найдена\033[0m \n")
+                print("\033[31mЗапись не найдена\033[0m ")
                 
     return_to_the_menu()
     
@@ -90,6 +90,7 @@ def record(filename):
         f.writelines(x + "\n")
     return_to_the_menu()
 
-# 1 Выбор пункта меню (есть)
+
+
 filename = r'C:\Users\super\Desktop\Учёба\GB\Python\Seminar 8\phonebook.txt'
 enter_user = menu(filename)

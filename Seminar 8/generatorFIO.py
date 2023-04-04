@@ -13,9 +13,9 @@ def generate_phone():
         phone += str(random.randint(0, 9))
     return phone
 
-# Создание файла с 1000 записей
-with open('phonebook.txt', 'w') as f:
+# Создание файла с 10 записями
+with open('phonebook.txt', 'w+') as f:
     for i in range(10):
         name = generate_name()
         phone = generate_phone()
-        f.write(f"{name},{phone}\n")
+        f.writelines(f"{name},{phone}\n")

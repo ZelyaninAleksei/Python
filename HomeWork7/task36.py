@@ -28,8 +28,21 @@ def enter_user_num(msg):
             print("Внесены некорректные данные. Повторите ввод.")
 
 
-def paint(num_rows, num_colu):
+def print_operation_table(operation, num_rows, num_cols):
+    
+    table = []
+    
+    for i in range(num_rows):
+        row = []
+        for j in range(num_cols):
+            value = (i + 1) * (j + 1)
+            row.append(value)
+        table.append(row)
+    
+    for row in table:
+        print(row)
     
 
 num_rows = enter_user_num("строк")
 num_colu = enter_user_num("столбцов")
+print_operation_table(print, num_rows, num_colu)
