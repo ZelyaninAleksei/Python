@@ -28,7 +28,7 @@ def user_enter_phrase():
         
         for i in range(len(quote)):
             if quote[i] not in rus_full_alpha:
-                print("Пяточок, неси ружье это какие то не правильные буквы. \n Повторите ввод. ")
+                print("Пяточок, неси ружье это какие то неправильные буквы. \n Повторите ввод. ")
                 break
             else:
                 return quote.split()

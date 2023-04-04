@@ -3,15 +3,19 @@
 # формате .txt. Фамилия, имя, отчество, номер
 # телефона - данные, которые должны находиться
 # в файле.
-# 1. Программа должна выводить данные
+
+# 1. Программа должна выводить данные +-
 # 2. Программа должна сохранять данные в
-# текстовом файле
+# текстовом файле +-(попробовать сделать через JSON)
 # 3. Пользователь может ввести одну из
 # характеристик для поиска определенной
 # записи(Например имя или фамилию
-# человека)
+# человека) +-
 # 4. Использование функций. Ваша программа
 # не должна быть линейной
+
+# Дополнить телефонный справочник возможностью изменения и удаления данных. 
+# Пользователь также может ввести имя или фамилию, и Вы должны реализовать функционал для изменения и удаления данных
 
 # id, lastname, firstname, secondname, phone
 
@@ -43,15 +47,10 @@ def viewing_the_phonebook(filename):
         
         print("")
         
-        with open(filename, 'r') as f:
+        with open(filename, 'r', encoding='utf-8') as f:
             print(f.read())
             return_to_the_menu()
 
-# def viewing_the_phonebook(filename):
-#     with open(filename, 'r') as f:
-#         for line in f:
-#             print(line)
-#     return_to_the_menu()
 
 def return_to_the_menu():
 
@@ -85,12 +84,12 @@ def search_person(request, filename):
     
 
 def record(filename):
-    with open(filename, 'a') as f:
-        x = input("Внесите ФИО и телефон:")
+    with open(filename, 'a', encoding ='utf-8') as f:
+        x = input("Внесите ФИО и телефон: ")
         f.writelines(x + "\n")
     return_to_the_menu()
 
 
 
-filename = r'C:\Users\super\Desktop\Учёба\GB\Python\Seminar 8\phonebook.txt'
+filename = r'Seminar 8\phonebook.txt'
 enter_user = menu(filename)

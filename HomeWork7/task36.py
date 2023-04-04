@@ -15,10 +15,6 @@
 
 
 
-
-# print_operation_table(operation, num_rows=6, num_columns=6),
-
-
 def enter_user_num(msg):
     while True:
         try:
@@ -40,9 +36,10 @@ def print_operation_table(operation, num_rows, num_cols):
         table.append(row)
     
     for row in table:
-        print(row)
+        operation(*row)
     
 
 num_rows = enter_user_num("строк")
 num_colu = enter_user_num("столбцов")
+
 print_operation_table(print, num_rows, num_colu)
